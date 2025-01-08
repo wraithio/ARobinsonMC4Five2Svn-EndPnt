@@ -16,11 +16,11 @@ namespace ARobinsonMC4Five2Svn_EndPnt.Services
             }
             else if(Num % 2 == 0)
             {
-                return "The number " + Num + " is even.";
+                return $"The number {Num} is even.";
             }
             else
             {
-                return "The number " + Num + " is odd.";
+                 return $"The number {Num} is odd.";
             }
         }
     }

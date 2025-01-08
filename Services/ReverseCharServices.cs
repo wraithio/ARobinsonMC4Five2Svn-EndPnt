@@ -14,8 +14,7 @@ namespace ARobinsonMC4Five2Svn_EndPnt.Services
         {
             reverseResult += userString[i];
         }
-        
-        return "You entered " + userString + ", reversed is " + reverseResult + ".";
+            return $"You entered {userString}, reversed is {reverseResult}.";
         }
     }
 }

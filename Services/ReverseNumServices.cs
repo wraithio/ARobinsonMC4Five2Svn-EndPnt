@@ -23,8 +23,7 @@ namespace ARobinsonMC4Five2Svn_EndPnt.Services
                     reverseInt = reverseInt * 10 + remainder;
                     temp /= 10;
                 }
-
-                return "You entered " + userInt + ", reversed is " + reverseInt + ".";
+                return $"You entered {userInt}, reversed is {reverseInt}.";
             }
         }
     }
