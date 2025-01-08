@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using ARobinsonMC4Five2Svn_EndPnt.Services;
 using Microsoft.AspNetCore.Mvc;
 
@@ -21,9 +17,19 @@ namespace ARobinsonMC4Five2Svn_EndPnt.Controllers
         [HttpGet]
         [Route("goOddEvn/{Num}")]
 
-        public string goOddEvn(int Num)
+        public string goOddEvn(string Num)
         {
-            return _oddEvnServices.goOddEvn(Num);
+        
+            int convertedNum;
+            bool success = int.TryParse(Num, out convertedNum);
+            if (success)
+            {
+                return _oddEvnServices.goOddEvn(Num);
+            }
+            else
+            {
+                return "Numbers and special characters are not acceptable.";
+            }
         }
     }
 }

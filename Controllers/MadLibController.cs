@@ -1,8 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection.Metadata.Ecma335;
-using System.Threading.Tasks;
 using ARobinsonMC4Five2Svn_EndPnt.Services;
 using Microsoft.AspNetCore.Mvc;
 
@@ -21,11 +16,11 @@ namespace ARobinsonMC4Five2Svn_EndPnt.Controllers
         }
 
         [HttpGet]
-        [Route("goMadLib/{firstWord}/{secondWord}/{thirdWord}/{fourthWord}/{fifthWord}/{sixthWord}/{seventhWord}/{eighthWord}/{ninthWord}/{tenthWord}")]
+        [Route("goMadLib/{color}/{adjective}/{place}/{adjective2}/{place2}/{singular_food}/{plural_food}/{verb}/{plural_noun}/{adjective3}")]
 
-        public string goMadLib(string firstWord, string secondWord, int thirdWord, string fourthWord, string fifthWord, string sixthWord, string seventhWord, string eighthWord, string ninthWord, int tenthWord)
+        public string goMadLib(string color, string adjective, string place, string adjective2, string place2, string singular_food, string plural_food, string verb, string plural_noun, string adjective3)
         {
-            return _madLibServices.goMadLib(firstWord, secondWord, thirdWord, fourthWord, fifthWord, sixthWord, seventhWord, eighthWord, ninthWord, tenthWord);
+            return _madLibServices.goMadLib(color, adjective, place, adjective2, place2, singular_food, plural_food, verb, plural_noun, adjective3);
 
         }
     }

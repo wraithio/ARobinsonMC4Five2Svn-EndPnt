@@ -21,9 +21,18 @@ namespace ARobinsonMC4Five2Svn_EndPnt.Controllers
         [HttpGet]
         [Route ("goReverseNum/{userInt}")]
 
-        public string goReverseNum(int userInt)
+        public string goReverseNum(string userInt)
         {
+              int convertedNum;
+            bool success = int.TryParse(userInt, out convertedNum);
+            if(success)
+            {
             return _reverseNumServices.goReverseNum(userInt);
+            }
+            else
+            {
+            return "Numbers and special characters are not acceptable.";
+            }
         }
     }
 }
